@@ -6,11 +6,11 @@ namespace Coffee.UIExtensions
 {
     internal class UIParticleMenu
     {
-        [MenuItem("GameObject/UI/Particle System (Empty)", false, 2018)]
+        [MenuItem("GameObject/UI (Canvas)/Particle System (Empty)", false, 2018)]
         private static void AddParticleEmpty(MenuCommand menuCommand)
         {
             // Create empty UI element.
-            EditorApplication.ExecuteMenuItem("GameObject/UI/Image");
+            EditorApplication.ExecuteMenuItem("GameObject/UI (Canvas)/Image");
             var ui = Selection.activeGameObject;
             Object.DestroyImmediate(ui.GetComponent<Image>());
 
@@ -21,7 +21,7 @@ namespace Coffee.UIExtensions
             uiParticle.rectTransform.sizeDelta = Vector2.zero;
         }
 
-        [MenuItem("GameObject/UI/Particle System", false, 2019)]
+        [MenuItem("GameObject/UI (Canvas)/Particle System", false, 2019)]
         private static void AddParticle(MenuCommand menuCommand)
         {
             // Create empty UIEffect.
